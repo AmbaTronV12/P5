@@ -61,7 +61,10 @@ function changeLogin(){
 
 document.addEventListener("DOMContentLoaded", function(e) {
     var url = window.location.pathname
-    if(!url.includes("login") && !url.includes("register") && getCookie("isLogin") == "") return window.location.replace("/login")
+    if(!url.includes("login") && !url.includes("register") && getCookie("isLogin") !=="true") 
+    {
+      window.location.replace("/index.html");
+    }
 });
 
 
